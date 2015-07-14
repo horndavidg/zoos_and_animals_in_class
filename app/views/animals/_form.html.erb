@@ -1,0 +1,16 @@
+<% if @animal.errors.any? %>
+	<% @animal.errors.full_messages.each do |error| %>
+		<p class="text-danger">
+			<%= error %>
+		</p>
+	<% end %>
+<% end %>
+
+<%= form_for [@zoo, @animal] do |f| %>
+ 	<%= f.label "Name:" %>
+ 	<%= f.text_field :name, autofocus: true %><br />
+ 	<%= f.label "Species:" %>
+ 	<%= f.text_field :species %><br />
+
+ 	<%= f.submit %>
+<% end %>
