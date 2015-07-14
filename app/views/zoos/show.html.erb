@@ -1,0 +1,6 @@
+<h1><%= @zoo.name %></h1>
+
+<p>Location: <%= @zoo.location %></p>
+<p>Year opened: <%= @zoo.year_open %></p>
+<%= link_to "Edit", edit_zoo_path(@zoo) %>
+<%= link_to "Delete", zoo_path(@zoo), method: :delete, data: {confirm: "Are you sure you want to kill all of these precious animals?"} %>

@@ -1,0 +1,18 @@
+<% if @zoo.errors.any? %>
+	<% @zoo.errors.full_messages.each do |error| %>
+		<p class="text-danger">
+			<%= error %>
+		</p>
+	<% end %>
+<% end %>
+
+<%= form_for @zoo do |f| %>
+ 	<%= f.label "Name:" %>
+ 	<%= f.text_field :name, autofocus: true %><br />
+ 	<%= f.label "Location:" %>
+ 	<%= f.text_field :location %><br />
+ 	<%= f.label "Year opened:" %>
+ 	<%= f.number_field :year_open %><br />
+
+ 	<%= f.submit %>
+<% end %>

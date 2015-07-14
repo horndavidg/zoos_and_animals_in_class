@@ -1,0 +1,8 @@
+<h1>All of the Zoos!</h1>
+
+<% @zoos.each do |zoo| %>
+	<div>
+		<%= link_to zoo.name, zoo_path(zoo) %> - <%= zoo.location %> - <%= zoo.year_open %>
+	</div>
+
+<% end %>
